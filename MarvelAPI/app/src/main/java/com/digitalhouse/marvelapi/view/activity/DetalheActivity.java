@@ -13,6 +13,7 @@ import com.squareup.picasso.Picasso;
 
 public class DetalheActivity extends AppCompatActivity {
     private ImageView imageViewDetalhe;
+    private ImageView imagemMiniPoster;
     private TextView  txtTitulo;
     private TextView  txtDescricao;
     private TextView  txtPreco;
@@ -31,13 +32,14 @@ public class DetalheActivity extends AppCompatActivity {
         if (getIntent() != null){
             comics = getIntent().getParcelableExtra("Comics");
             Picasso.get().load(comics.getThumbnail().getPath() + "." + comics.getThumbnail().getExtension()).into(imageViewDetalhe);
+            Picasso.get().load(comics.getThumbnail().getPath()+"."+comics.getThumbnail().getExtension()).into(imagemMiniPoster);
             txtTitulo.setText(comics.getTitle());
             txtDescricao.setText(comics.getDescription());
             txtDataPublicacao.setText(Util.ConvertToDate(comics.getDates().get(0).getDate()));
             txtPreco.setText(comics.getPrices().get(0).getPrice().toString());
             txtPaginas.setText(comics.getPageCount().toString());
 
-            imageViewDetalhe.setOnClickListener(new View.OnClickListener() {
+            imagemMiniPoster.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
@@ -67,5 +69,6 @@ public class DetalheActivity extends AppCompatActivity {
          txtPreco = findViewById(R.id.textPreco);
          txtPaginas = findViewById(R.id.textPaginas);
          botaoVoltar = findViewById(R.id.botaoVoltar);
+        imagemMiniPoster = findViewById(R.id.imagemMiniPoster);
     }
 }
