@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">MarvelAPI</string>
+    <string name="app_name">MARVEL</string>
+    <string name="title_activity_poster">PosterActivity</string>
+    <string name="comic_descricao">It\'s Spider-Man and the FF from cover to cover as the Wall-Crawler and the Fantastic Four get their very own magazine! More stories of the world\'s greatest superheroes plus tons of extras that will knock your socks off!</string>
+    <string name="comic_titulo">SPIDER-MAN FEATURING THE SILVER SURFER MAGAZINE WAL-MART VARIANT (2007) #1</string>
 </resources>
