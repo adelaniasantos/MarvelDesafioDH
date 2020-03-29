@@ -1,6 +1,7 @@
-package com.digitalhouse.marvelapi;
+package com.digitalhouse.marvelapi.view;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.digitalhouse.marvelapi.R;
 
 public class MainActivity extends AppCompatActivity {
 
