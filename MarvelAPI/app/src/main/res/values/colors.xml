@@ -5,4 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="azul_escuro">#050B2B</color>
     <color name="branco">#FFFFFF</color>
+    <color name="vermelho">#EA2427</color>
+    <color name="cor_status_bar">#BB1C1F</color>
+    <color name="preto">#000000</color>
 </resources>
