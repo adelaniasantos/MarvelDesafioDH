@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MarvelAPI</string>
+    <string name="log_in">LOG IN</string>
+    <string name="welcome">Welcome to the Marvel HQ\'s</string>
 </resources>

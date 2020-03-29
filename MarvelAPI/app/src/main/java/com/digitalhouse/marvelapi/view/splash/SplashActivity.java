@@ -3,7 +3,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import com.digitalhouse.marvelapi.R;
-import com.digitalhouse.marvelapi.view.MainActivity;
+import com.digitalhouse.marvelapi.view.LoginActivity;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private void jump() {
         timer.cancel();
-        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+        startActivity(new Intent(SplashActivity.this, LoginActivity.class));
         finish();
     }
 }
