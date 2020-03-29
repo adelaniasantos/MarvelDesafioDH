@@ -20,7 +20,6 @@ public class Util {
                     (networkInfo.getType() == ConnectivityManager.TYPE_WIFI
                             || networkInfo.getType() == ConnectivityManager.TYPE_MOBILE);
         }
-
         return false;
     }
 
@@ -52,21 +51,21 @@ public class Util {
             e.printStackTrace();
             return dateString;
         }
-        return  dataReturn;
-
-public class Util {
-    public static boolean usuarioValido (String usuario){
-        return (usuario.contains("@") && usuario.contains(".com") );
+        return dataReturn;
     }
 
-    public static boolean isEmptyString (String valor){
+    public static boolean usuarioValido(String usuario) {
+        return (usuario.contains("@") && usuario.contains(".com"));
+    }
+
+    public static boolean isEmptyString(String valor) {
         return valor == null || valor.trim().equals("");
     }
 
     public static boolean senhaValida(String senha) {
         if (senha.length() < 6) {
             return false;
-        }else
+        } else
             return true;
     }
 }

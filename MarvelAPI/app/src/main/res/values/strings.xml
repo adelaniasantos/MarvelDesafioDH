@@ -3,7 +3,17 @@
     <string name="title_activity_poster">PosterActivity</string>
     <string name="comic_descricao">It\'s Spider-Man and the FF from cover to cover as the Wall-Crawler and the Fantastic Four get their very own magazine! More stories of the world\'s greatest superheroes plus tons of extras that will knock your socks off!</string>
     <string name="comic_titulo">SPIDER-MAN FEATURING THE SILVER SURFER MAGAZINE WAL-MART VARIANT (2007) #1</string>
-    <string name="app_name">MarvelAPI</string>
     <string name="log_in">LOG IN</string>
     <string name="welcome">Welcome to the Marvel HQ\'s</string>
+    <string name="preco">5,99</string>
+    <string name="paginas">33</string>
+    <string name="published">Published:</string>
+    <string name="price">Price: $</string>
+    <string name="pages">Pages:</string>
+    <string name="data">April 30, 2014</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember">Remember</string>
+    <string name="create_account">Create account</string>
+    <string name="number">#99</string>
 </resources>

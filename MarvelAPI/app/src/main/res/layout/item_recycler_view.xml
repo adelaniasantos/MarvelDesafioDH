@@ -26,7 +26,7 @@
                 android:layout_height="140dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="3dp"
-                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
                 android:layout_marginBottom="3dp"
                 android:background="@drawable/border"
                 android:scaleType="centerCrop"
@@ -36,7 +36,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -48,17 +47,14 @@
                 android:id="@+id/txtIssueNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="#99"
+                android:text="@string/number"
                 android:textAlignment="center"
-                android:textColor="#fff"
+                android:textColor="@color/branco"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

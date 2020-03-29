@@ -45,7 +45,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|bottom"
-
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:background="@color/branco">
@@ -76,7 +75,7 @@
                 android:layout_marginTop="24dp"
                 android:gravity="left"
                 android:text="@string/comic_titulo"
-                android:textColor="#ffffff"
+                android:textColor="@color/branco"
                 android:textSize="16dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +89,7 @@
                 android:layout_gravity="bottom"
                 android:layout_marginTop="16dp"
                 android:text="@string/comic_descricao"
-                android:textColor="#ffffff"
+                android:textColor="@color/branco"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textTitulo" />
@@ -100,10 +99,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:text="April 30, 2014"
-                android:textColor="#ffffff"
+                android:text="@string/data"
+                android:textColor="@color/branco"
                 app:layout_constraintStart_toEndOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/textDescricao" />
 
@@ -112,10 +111,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
-                android:text="5,99"
-                android:textColor="#ffffff"
+                android:text="@string/preco"
+                android:textColor="@color/branco"
                 app:layout_constraintStart_toEndOf="@+id/textView2"
                 app:layout_constraintTop_toBottomOf="@+id/textPublishesd" />
 
@@ -124,10 +123,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
-                android:text="33"
-                android:textColor="#ffffff"
+                android:text="@string/paginas"
+                android:textColor="@color/branco"
                 app:layout_constraintStart_toEndOf="@+id/textView3"
                 app:layout_constraintTop_toBottomOf="@+id/textPreco" />
 
@@ -136,8 +135,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Published: "
-                android:textColor="#FFFFFF"
+                android:text="@string/published"
+                android:textColor="@color/branco"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textDescricao" />
@@ -147,8 +146,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Price: $ "
-                android:textColor="#FFFFFF"
+                android:text="@string/price"
+                android:textColor="@color/branco"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -158,8 +157,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Pages: "
-                android:textColor="#FFFFFF"
+                android:text="@string/pages"
+                android:textColor="@color/branco"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textPreco" />

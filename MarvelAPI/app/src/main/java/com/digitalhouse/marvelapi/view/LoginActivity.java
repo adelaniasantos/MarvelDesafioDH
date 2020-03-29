@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.Toast;
 import com.digitalhouse.marvelapi.R;
 import com.digitalhouse.marvelapi.util.Util;
+import com.digitalhouse.marvelapi.view.activity.MainActivity;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
