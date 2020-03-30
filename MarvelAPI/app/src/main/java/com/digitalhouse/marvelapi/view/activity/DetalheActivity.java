@@ -10,7 +10,6 @@ import com.digitalhouse.marvelapi.R;
 import com.digitalhouse.marvelapi.model.Comics;
 import com.digitalhouse.marvelapi.util.Util;
 import com.squareup.picasso.Picasso;
-
 import static com.digitalhouse.marvelapi.util.Util.COMICS;
 
 public class DetalheActivity extends AppCompatActivity {
@@ -68,6 +67,6 @@ public class DetalheActivity extends AppCompatActivity {
          txtPreco = findViewById(R.id.textPreco);
          txtPaginas = findViewById(R.id.textPaginas);
          botaoVoltar = findViewById(R.id.botaoVoltar);
-        imagemMiniPoster = findViewById(R.id.imagemMiniPoster);
+         imagemMiniPoster = findViewById(R.id.imagemMiniPoster);
     }
 }

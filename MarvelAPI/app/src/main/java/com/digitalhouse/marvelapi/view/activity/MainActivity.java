@@ -1,5 +1,4 @@
 package com.digitalhouse.marvelapi.view.activity;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
@@ -29,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements OnClick {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         initViews();
 
         recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
@@ -37,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements OnClick {
         setScrollView();
 
         viewModel.getComics(offset);
-
         viewModel.getListaComics().observe(this, comicsList -> {
             adapter.atualizaLista(comicsList);
         });
@@ -68,7 +65,6 @@ public class MainActivity extends AppCompatActivity implements OnClick {
     }
 
     private void setScrollView() {
-
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
 
             @Override

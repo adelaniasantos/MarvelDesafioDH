@@ -7,7 +7,6 @@ import android.widget.ImageView;
 import com.digitalhouse.marvelapi.R;
 import com.digitalhouse.marvelapi.model.Comics;
 import com.squareup.picasso.Picasso;
-
 import static com.digitalhouse.marvelapi.util.Util.COMICS;
 
 public class PosterActivity extends AppCompatActivity {
