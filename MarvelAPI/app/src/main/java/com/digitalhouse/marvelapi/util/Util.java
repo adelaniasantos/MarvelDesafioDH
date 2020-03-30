@@ -1,7 +1,4 @@
 package com.digitalhouse.marvelapi.util;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -15,19 +12,6 @@ public class Util {
     public static final String PRIVATE_KEY = "0dd0c16fedb8a02985977eafca66b49f5e6a526f";
     public static final String TS = Long.toString (System. currentTimeMillis () / 1000 );
     public static final String COMICS = "Comics";
-
-    public static boolean verificaConexaoComInternet(Context context) {
-        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo;
-
-        if (connectivityManager != null) {
-            networkInfo = connectivityManager.getActiveNetworkInfo();
-            return networkInfo != null && networkInfo.isConnected() &&
-                    (networkInfo.getType() == ConnectivityManager.TYPE_WIFI
-                            || networkInfo.getType() == ConnectivityManager.TYPE_MOBILE);
-        }
-        return false;
-    }
 
     public static String md5(String s) {
         String sen = "";

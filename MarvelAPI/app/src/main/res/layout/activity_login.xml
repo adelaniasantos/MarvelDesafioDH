@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00162C"
+    android:background="@color/fundo_login"
     tools:context=".view.LoginActivity">
 
     <FrameLayout
@@ -121,7 +121,7 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:background="@drawable/shape_botao"
-                    android:backgroundTint="#EA2427"
+                    android:backgroundTint="@color/cor_botao"
                     android:text="@string/log_in"
                     android:textColor="@color/branco"
                     android:textStyle="bold"

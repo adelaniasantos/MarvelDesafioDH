@@ -9,4 +9,6 @@
     <color name="cor_status_bar">#91261D</color>
     <color name="preto">#000000</color>
     <color name="cor_poster">#050B2B</color>
+    <color name="fundo_login">#00162C</color>
+    <color name="cor_botao">#EA2427</color>
 </resources>
