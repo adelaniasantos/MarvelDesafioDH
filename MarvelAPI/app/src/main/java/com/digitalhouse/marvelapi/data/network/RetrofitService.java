@@ -14,7 +14,6 @@ public class RetrofitService {
 
     private static Retrofit getRetrofit() {
         if (retrofit == null) {
-
             OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
             httpClient.readTimeout(30, TimeUnit.SECONDS);
             httpClient.connectTimeout(30, TimeUnit.SECONDS);
@@ -34,7 +33,6 @@ public class RetrofitService {
                     .client(httpClient.build())
                     .build();
         }
-
         return retrofit;
     }
 

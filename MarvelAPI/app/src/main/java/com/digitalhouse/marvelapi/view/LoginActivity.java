@@ -21,11 +21,9 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         initViews();
 
-        botaoLogin = findViewById(R.id.buttonLogIn);
         botaoLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if(validaCampos()) {
                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
                     finish();
@@ -38,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         loginUsuario = findViewById(R.id.textEmailLogin);
         loginSenha = findViewById(R.id.textPasswordLogin);
         botaoLogin = findViewById(R.id.buttonLogIn);
+        botaoLogin = findViewById(R.id.buttonLogIn);
     }
 
     private boolean validaCampos(){
@@ -45,9 +44,9 @@ public class LoginActivity extends AppCompatActivity {
         String senha = loginSenha.getEditText().getText().toString();
 
         if (Util.isEmptyString(usuario) || Util.isEmptyString(senha))
-            notificacao( "Por favor, preencha todos os campos");
+            notificacao( getString(R.string.msg_campos_invalido));
         else if (!Util.usuarioValido(usuario) || !Util.senhaValida(senha))
-            notificacao( "Usuário ou senha não atendem as regras, por favor, tente novamente");
+            notificacao( getString(R.string.msg_user_senha_invalido));
         else
             return true;
 

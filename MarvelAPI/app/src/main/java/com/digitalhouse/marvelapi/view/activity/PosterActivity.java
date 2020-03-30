@@ -8,18 +8,21 @@ import com.digitalhouse.marvelapi.R;
 import com.digitalhouse.marvelapi.model.Comics;
 import com.squareup.picasso.Picasso;
 
+import static com.digitalhouse.marvelapi.util.Util.COMICS;
+
 public class PosterActivity extends AppCompatActivity {
     private Button botaoFechar;
+    private ImageView imageViewPoster;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_poster);
 
-        ImageView imageViewPoster = findViewById(R.id.imagemPoster);
+        imageViewPoster = findViewById(R.id.imagemPoster);
 
         if (getIntent() != null){
-            Comics comics = getIntent().getParcelableExtra("Comics");
+            Comics comics = getIntent().getParcelableExtra(COMICS);
             Picasso.get().load(comics.getThumbnail().getPath() + "." + comics.getThumbnail().getExtension()).into(imageViewPoster);
         }
 

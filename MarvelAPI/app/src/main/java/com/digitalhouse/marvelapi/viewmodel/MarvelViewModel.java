@@ -1,18 +1,13 @@
 package com.digitalhouse.marvelapi.viewmodel;
-
 import android.app.Application;
 import android.util.Log;
-
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-
 import com.digitalhouse.marvelapi.model.Comics;
 import com.digitalhouse.marvelapi.repository.MarvelRepository;
-
 import java.util.List;
-
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;

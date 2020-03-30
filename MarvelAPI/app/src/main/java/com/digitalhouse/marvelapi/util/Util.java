@@ -10,6 +10,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Util {
+    public static final String PUBLIC_KEY = "6eb7e8896ec5850c52515a8a23ee97f0";
+    public static final String PRIVATE_KEY = "0dd0c16fedb8a02985977eafca66b49f5e6a526f";
+    public static final String TS = Long.toString (System. currentTimeMillis () / 1000 );
+    public static final String COMICS = "Comics";
+
     public static boolean verificaConexaoComInternet(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo;
@@ -39,7 +44,6 @@ public class Util {
     public static String ConvertToDate(String dateString) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         SimpleDateFormat fmtReturn = new SimpleDateFormat("MMM dd, yyyy");
-
         Date convertedDate = new Date();
         String dataReturn = "";
 

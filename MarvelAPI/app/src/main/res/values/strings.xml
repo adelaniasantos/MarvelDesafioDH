@@ -16,4 +16,6 @@
     <string name="remember">Remember</string>
     <string name="create_account">Create account</string>
     <string name="number">#99</string>
+    <string name="msg_campos_invalido">Por favor, preencha todos os campos</string>
+    <string name="msg_user_senha_invalido">Usuário ou senha não atendem as regras, por favor, tente novamente</string>
 </resources>

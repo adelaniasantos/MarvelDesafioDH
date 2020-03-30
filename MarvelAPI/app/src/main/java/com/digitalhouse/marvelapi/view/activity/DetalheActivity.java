@@ -11,6 +11,8 @@ import com.digitalhouse.marvelapi.model.Comics;
 import com.digitalhouse.marvelapi.util.Util;
 import com.squareup.picasso.Picasso;
 
+import static com.digitalhouse.marvelapi.util.Util.COMICS;
+
 public class DetalheActivity extends AppCompatActivity {
     private ImageView imageViewDetalhe;
     private ImageView imagemMiniPoster;
@@ -26,11 +28,10 @@ public class DetalheActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalhe);
-
         initViews();
 
         if (getIntent() != null){
-            comics = getIntent().getParcelableExtra("Comics");
+            comics = getIntent().getParcelableExtra(COMICS);
             Picasso.get().load(comics.getThumbnail().getPath() + "." + comics.getThumbnail().getExtension()).into(imageViewDetalhe);
             Picasso.get().load(comics.getThumbnail().getPath()+"."+comics.getThumbnail().getExtension()).into(imagemMiniPoster);
             txtTitulo.setText(comics.getTitle());
@@ -42,13 +43,11 @@ public class DetalheActivity extends AppCompatActivity {
             imagemMiniPoster.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
                     Intent intent = new Intent(DetalheActivity.this, PosterActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putParcelable("Comics", comics);
                     intent.putExtras(bundle);
                     startActivity(intent);
-
                 }
             });
 
