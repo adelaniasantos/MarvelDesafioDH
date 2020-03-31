@@ -1,7 +1,15 @@
 package com.digitalhouse.marvelapi.model;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.google.gson.annotations.Expose;
 
+@Entity(tableName = "comicsresponse")
 public class ComicsResponse {
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    private long id;
     @Expose
     private String attributionHTML;
     @Expose
@@ -16,6 +24,16 @@ public class ComicsResponse {
     private String etag;
     @Expose
     private String status;
+
+    public ComicsResponse() { }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getAttributionHTML() {
         return attributionHTML;

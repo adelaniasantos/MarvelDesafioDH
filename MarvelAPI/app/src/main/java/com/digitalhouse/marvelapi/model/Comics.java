@@ -1,12 +1,21 @@
 package com.digitalhouse.marvelapi.model;
 import android.os.Parcel;
 import android.os.Parcelable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 
+@Entity(tableName = "comics")
 public class Comics implements Parcelable {
+
     @Expose
-    private List<Date> dates;
+    @PrimaryKey(autoGenerate = false)
+    @ColumnInfo(name = "id")
+    private Long id;
+   /* @Expose
+    private List<Date> dates;*/
     @Expose
     private String description;
     @Expose
@@ -17,10 +26,6 @@ public class Comics implements Parcelable {
     private String ean;
     @Expose
     private String format;
-    @Expose
-    private Long id;
-    @Expose
-    private List<Image> images;
     @Expose
     private String isbn;
     @Expose
@@ -44,8 +49,10 @@ public class Comics implements Parcelable {
     @Expose
     private String variantDescription;
 
+    public Comics() { }
+
     protected Comics(Parcel in) {
-        dates = in.createTypedArrayList(Date.CREATOR);
+        //dates = in.createTypedArrayList(Date.CREATOR);
         description = in.readString();
         diamondCode = in.readString();
         if (in.readByte() == 0) {
@@ -60,7 +67,6 @@ public class Comics implements Parcelable {
         } else {
             id = in.readLong();
         }
-        images = in.createTypedArrayList(Image.CREATOR);
         isbn = in.readString();
         issn = in.readString();
         if (in.readByte() == 0) {
@@ -94,13 +100,13 @@ public class Comics implements Parcelable {
         }
     };
 
-    public List<Date> getDates() {
+/*    public List<Date> getDates() {
         return dates;
     }
 
     public void setDates(List<Date> dates) {
         this.dates = dates;
-    }
+    }*/
 
     public String getDescription() {
         return description;
@@ -148,14 +154,6 @@ public class Comics implements Parcelable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public List<Image> getImages() {
-        return images;
-    }
-
-    public void setImages(List<Image> images) {
-        this.images = images;
     }
 
     public String getIsbn() {
@@ -253,7 +251,7 @@ public class Comics implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeTypedList(dates);
+       // dest.writeTypedList(dates);
         dest.writeString(description);
         dest.writeString(diamondCode);
         if (digitalId == null) {
@@ -270,7 +268,6 @@ public class Comics implements Parcelable {
             dest.writeByte((byte) 1);
             dest.writeLong(id);
         }
-        dest.writeTypedList(images);
         dest.writeString(isbn);
         dest.writeString(issn);
         if (issueNumber == null) {

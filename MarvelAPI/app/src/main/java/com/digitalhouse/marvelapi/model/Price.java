@@ -1,13 +1,24 @@
 package com.digitalhouse.marvelapi.model;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.google.gson.annotations.Expose;
 
+@Entity(tableName = "price")
 public class Price implements Parcelable {
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    private long id;
     @Expose
     private Double price;
     @Expose
     private String type;
+
+    public Price() { }
 
     protected Price(Parcel in) {
         if (in.readByte() == 0) {
@@ -16,6 +27,14 @@ public class Price implements Parcelable {
             price = in.readDouble();
         }
         type = in.readString();
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public static final Creator<Price> CREATOR = new Creator<Price>() {

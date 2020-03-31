@@ -35,7 +35,7 @@ public class DetalheActivity extends AppCompatActivity {
             Picasso.get().load(comics.getThumbnail().getPath()+"."+comics.getThumbnail().getExtension()).into(imagemMiniPoster);
             txtTitulo.setText(comics.getTitle());
             txtDescricao.setText(comics.getDescription());
-            txtDataPublicacao.setText(Util.ConvertToDate(comics.getDates().get(0).getDate()));
+            //txtDataPublicacao.setText(Util.ConvertToDate(comics.getDates().get(0).getDate()));
             txtPreco.setText(comics.getPrices().get(0).getPrice().toString());
             txtPaginas.setText(comics.getPageCount().toString());
 

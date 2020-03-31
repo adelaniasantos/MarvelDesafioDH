@@ -1,15 +1,26 @@
 package com.digitalhouse.marvelapi.model;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.google.gson.annotations.Expose;
 
-public class Date implements Parcelable {
+//@Entity(tableName = "date")
+public class Date /*implements Parcelable */{
+/*    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    private long id;*/
     @Expose
     private String date;
     @Expose
     private String type;
 
-    protected Date(Parcel in) {
+    public Date() { }
+
+  /*  protected Date(Parcel in) {
         date = in.readString();
         type = in.readString();
     }
@@ -25,6 +36,14 @@ public class Date implements Parcelable {
             return new Date[size];
         }
     };
+*/
+/*    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }*/
 
     public String getDate() {
         return date;
@@ -42,7 +61,7 @@ public class Date implements Parcelable {
         this.type = type;
     }
 
-    @Override
+  /*  @Override
     public int describeContents() {
         return 0;
     }
@@ -51,5 +70,5 @@ public class Date implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(date);
         dest.writeString(type);
-    }
+    }*/
 }

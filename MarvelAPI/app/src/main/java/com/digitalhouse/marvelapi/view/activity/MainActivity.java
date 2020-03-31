@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 import com.digitalhouse.marvelapi.R;
 import com.digitalhouse.marvelapi.model.Comics;
 import com.digitalhouse.marvelapi.view.adapter.RecyclerViewMarvelAdapter;
@@ -46,6 +47,11 @@ public class MainActivity extends AppCompatActivity implements OnClick {
                 progressBar.setVisibility(View.GONE);
             }
         });
+
+        viewModel.liveDataErro.observe(this, error -> {
+            Toast.makeText(this, error, Toast.LENGTH_LONG).show();
+        });
+
     }
 
     private void initViews() {
